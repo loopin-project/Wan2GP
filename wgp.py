@@ -2863,7 +2863,7 @@ def process_tasks(state, progress=gr.Progress()):
     if abort:
         yield f"Video generation was aborted. Total Generation Time: {end_time-start_time:.1f}s"
     else:
-        yield f"Total Generation Time: {end_time-start_time:.1f}s"
+        yield gen["file_list"]
 
 
 def get_generation_status(prompt_no, prompts_max, repeat_no, repeat_max, sliding_window):
